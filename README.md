@@ -1,3 +1,14 @@
+# Hyades AI
+
+A cutting-edge image editing platform powered by advanced AI technology. Inspired by the brilliance of the Hyades star cluster, our app offers seamless, intuitive tools for enhancing and transforming images with professional-grade precision. 
+
+Whether you're a creative professional or a hobbyist, Hyades AI empowers you to bring your visual ideas to life with ease and sophistication. Experience the future of image editing with Hyades AI—where creativity meets innovation.
+
+
+View it in action here: [Hyades Ai](https://next-jwd.vercel.app/)
+
+#
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
