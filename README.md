@@ -7,6 +7,22 @@ Whether you're a creative professional or a hobbyist, Hyades AI empowers you to 
 
 View it in action here: [Hyades Ai](https://next-jwd.vercel.app/)
 
+## Tech Stack
+
+- Next.js
+- TypeScript
+- MongoDB
+- Clerk
+- Cloudinary
+- Stripe
+- Shadcn
+- TailwindCSS
+
+# Resources
+- [Youtube Video](https://www.youtube.com/watch?v=Ahwoks_dawU)
+- [GitHub Project](https://github.com/adrianhajdin/ai_saas_app/blob/main/README.md)
+
+#
 #
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
