@@ -9,14 +9,14 @@ View it in action here: [Hyades Ai](https://next-jwd.vercel.app/)
 
 ## Tech Stack
 
-- Next.js
-- TypeScript
-- MongoDB
-- Clerk
-- Cloudinary
-- Stripe
-- Shadcn
-- TailwindCSS
+- [Next.js](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [MongoDB](https://www.mongodb.com/)
+- [Clerk](https://clerk.com/docs)
+- [Cloudinary](https://cloudinary.com/)
+- [Stripe](https://stripe.com)
+- [Shadcn](https://ui.shadcn.com/)
+- [TailwindCSS](https://tailwindcss.com/)
 
 # Resources
 - [Youtube Video](https://www.youtube.com/watch?v=Ahwoks_dawU)
