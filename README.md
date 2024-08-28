@@ -5,7 +5,7 @@ A cutting-edge image editing platform powered by advanced AI technology. Inspire
 Whether you're a creative professional or a hobbyist, Hyades AI empowers you to bring your visual ideas to life with ease and sophistication. Experience the future of image editing with Hyades AI—where creativity meets innovation.
 
 
-View it in action here: [Hyades Ai](https://next-jwd.vercel.app/)
+View it in action here: [Hyades AI](https://next-jwd.vercel.app/)
 
 ## Tech Stack
 
