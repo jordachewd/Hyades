@@ -1,4 +1,4 @@
-# Hyades AI
+# Hyades AI SaaS Platform
 
 A cutting-edge image editing platform powered by advanced AI technology. Inspired by the brilliance of the Hyades star cluster, our app offers seamless, intuitive tools for enhancing and transforming images with professional-grade precision. 
 
