@@ -11,7 +11,7 @@ const IBMPlex = IBM_Plex_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Hyades AI",
+  title: "Hyades",
   description: "Where Innovation Meets Imagination.",
 };
 
