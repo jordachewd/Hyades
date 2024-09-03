@@ -36,6 +36,12 @@ module.exports = {
           600: "#2B3674",
           700: "#384262",
         },
+        darkblue: {
+          400: "#1b1e50",
+        },
+        orange: {
+          400: "#f05722",
+        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",

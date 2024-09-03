@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="120"
+   height="34"
+   fill="currentColor"
+   class="bi bi-stars"
+   viewBox="0 0 120 34"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="hyades-banner.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="4.8889805"
+     inkscape:cx="76.089483"
+     inkscape:cy="25.874515"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <g
+     id="g1"
+     transform="translate(0.29728207,-0.98263298)">
+    <path
+       d="m 14.885064,14.587175 c 0.212884,-0.638675 1.114761,-0.638675 1.327636,0 l 1.248298,3.748735 a 5.5931225,5.5931225 0 0 0 3.539737,3.537799 l 3.746813,1.248284 c 0.638652,0.2129 0.638652,1.11475 0,1.327648 l -3.74876,1.248295 a 5.5931225,5.5931225 0 0 0 -3.53779,3.539731 L 16.2127,32.984478 a 0.69865663,0.69865663 0 0 1 -1.327636,0 l -1.248298,-3.748752 a 5.5931225,5.5931225 0 0 0 -3.537789,-3.53779 L 6.3502301,24.449641 a 0.69865663,0.69865663 0 0 1 0,-1.327648 L 10.098977,21.873709 A 5.5931225,5.5931225 0 0 0 13.636766,18.33591 Z M 7.4088586,4.7188884 a 0.41996809,0.41996809 0 0 1 0.7973587,0 l 0.748975,2.2488623 C 9.2900055,7.970254 10.075753,8.7560012 11.078256,9.0908142 l 2.248855,0.7489728 a 0.41996809,0.41996809 0 0 1 0,0.797359 l -2.248855,0.748981 a 3.3481322,3.3481322 0 0 0 -2.1230637,2.123055 l -0.748975,2.24886 a 0.41996809,0.41996809 0 0 1 -0.7973587,0 L 6.659884,13.509182 A 3.3481322,3.3481322 0 0 0 4.5368187,11.386127 L 2.2879556,10.637146 a 0.41996809,0.41996809 0 0 1 0,-0.797359 L 4.5368187,9.0908142 A 3.3481322,3.3481322 0 0 0 6.659884,6.9677507 Z M 21.08975,2.6887188 a 0.28062381,0.28062381 0 0 1 0.530295,0 l 0.499309,1.4979522 c 0.222566,0.6696268 0.747048,1.1941026 1.416666,1.4166665 l 1.497958,0.4993171 a 0.28062381,0.28062381 0 0 1 0,0.5302816 L 23.53602,7.1322531 a 2.2449914,2.2449914 0 0 0 -1.416666,1.4166673 l -0.499309,1.4979506 a 0.28062381,0.28062381 0 0 1 -0.530295,0 L 20.590444,8.5489204 A 2.2449914,2.2449914 0 0 0 19.173769,7.1322531 L 17.677757,6.6329362 a 0.28062381,0.28062381 0 0 1 0,-0.5302816 L 19.175714,5.6033375 C 19.845327,5.3807736 20.369801,4.8562978 20.592379,4.186671 Z"
+       id="path1"
+       style="display:inline;fill:#1b1e50;fill-opacity:1;stroke-width:1.93533" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:26.6667px;line-height:0px;font-family:'Champagne &amp; Limousines';-inkscape-font-specification:'Champagne &amp; Limousines Medium';letter-spacing:1px;fill:#1b1e50;fill-opacity:1;stroke-width:1.54826"
+       x="42.090401"
+       y="28.924891"
+       id="text1"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         x="42.090401"
+         y="28.924891"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:26.6667px;font-family:'Champagne &amp; Limousines';-inkscape-font-specification:'Champagne &amp; Limousines Medium';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:1px;stroke-width:1.54826">H<tspan
+   style="font-size:21.3333px"
+   id="tspan2">YADES</tspan></tspan></text>
+  </g>
+</svg>
