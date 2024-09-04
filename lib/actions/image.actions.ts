@@ -108,7 +108,7 @@ export async function getAllImages({
       secure: true,
     });
 
-    let expression = "folder=jwd_hyades";
+    let expression = "folder=hyades";
 
     if (searchQuery) {
       expression += ` AND ${searchQuery}`;
