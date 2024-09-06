@@ -12,13 +12,11 @@ export default async function AddTransformationTypePage({
   const transformation = transformationTypes[type];
 
   if (!userId) redirect("/sign-in");
-
   const user = await getUserById(userId);
 
   return (
     <>
       <Header title={transformation.title} subtitle={transformation.subTitle} />
-
       <section className="mt-10">
         <TransformationForm
           action="Add"

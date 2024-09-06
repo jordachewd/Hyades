@@ -306,7 +306,7 @@ export default function TransformationForm({
           />
         </div>
 
-        <div className="flex flex-col gap-4">
+        <div className="flex gap-4 justify-between">
           <Button
             className="submit-button capitalize"
             type="button"

@@ -72,7 +72,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        IBMPlex: ["var(--font-ibm-plex)"],
+        HyadesFont: ["var(--font-hyades)"],
       },
       backgroundImage: {
         "purple-gradient": "url('/assets/images/gradient-bg.svg')",

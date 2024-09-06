@@ -91,7 +91,7 @@
 @layer utilities {
   /* ===== UTILITIES */
   .wrapper {
-    @apply max-w-5xl mx-auto px-5 md:px-10 w-full text-dark-400 p-16-regular;
+    @apply mx-auto px-5 md:px-10 w-full text-dark-400 p-16-regular;
   }
 
   .gradient-text {
@@ -109,18 +109,23 @@
 
   /* ===== TYPOGRAPHY */
   /* 44 */
+
+  .h1-normal {
+    @apply text-[36px] font-normal sm:text-[44px] leading-[120%] sm:leading-[56px];
+  }
+
   .h1-semibold {
     @apply text-[36px] font-semibold sm:text-[44px] leading-[120%] sm:leading-[56px];
   }
 
   /* 36 */
   .h2-bold {
-    @apply text-[30px] font-bold md:text-[36px] leading-[110%];
+    @apply text-[30px] font-semibold md:text-[36px] leading-[110%];
   }
 
   /* 30 */
   .h3-bold {
-    @apply font-bold text-[30px] leading-[140%];
+    @apply font-medium text-[24px] leading-[140%];
   }
 
   /* 24 */
@@ -153,6 +158,10 @@
 
   .p-16-regular {
     @apply font-normal text-[16px] leading-[140%];
+  }
+
+  .p-16-light {
+    @apply font-light text-[16px] leading-[140%];
   }
 
   /* 14 */
@@ -220,11 +229,11 @@
 
   /* Home Page */
   .home {
-    @apply sm:flex-center hidden h-72 flex-col gap-4 rounded-[20px] border p-10 shadow-inner bg-darkblue-400;
+    @apply sm:flex-center hidden  flex-col gap-4 rounded-[20px] border p-10 shadow-inner bg-darkblue-400;
   }
 
   .home-heading {
-    @apply h1-semibold max-w-[500px] flex-wrap text-center text-white shadow-sm;
+    @apply h1-normal flex-wrap text-center text-white shadow-sm;
   }
 
   /* Credits Page */
@@ -237,7 +246,7 @@
   }
 
   .credits-btn {
-    @apply w-full rounded-full bg-purple-100 bg-cover text-purple-500 hover:text-purple-500;
+    @apply w-full rounded-full bg-purple-100 bg-cover text-darkblue-400 hover:text-purple-500;
   }
 
   /* Profile Page */
@@ -268,7 +277,7 @@
   }
 
   .collection-list {
-    @apply grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3;
+    @apply grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4;
   }
 
   .collection-empty {
@@ -280,7 +289,7 @@
   }
 
   .collection-card {
-    @apply flex flex-1 cursor-pointer flex-col gap-5 rounded-[16px] border-2 border-purple-200/15 bg-white p-4 shadow-xl shadow-purple-200/10 transition-all hover:shadow-purple-200/20;
+    @apply flex flex-1 cursor-pointer flex-col gap-5 rounded-[16px] border-2 border-purple-200/15 bg-white p-1 shadow-xl shadow-purple-200/10 transition-all hover:shadow-purple-200/20;
   }
 
   /* MediaUploader Component */
@@ -328,11 +337,11 @@
   }
 
   .sidebar-nav_element {
-    @apply flex-center p-16-semibold w-full whitespace-nowrap rounded-full bg-cover  transition-all hover:bg-purple-100 hover:shadow-inner;
+    @apply flex-center p-16-regular w-full whitespace-nowrap rounded-full bg-cover transition-all hover:bg-purple-100 hover:shadow-inner;
   }
 
   .sidebar-link {
-    @apply p-16-semibold flex size-full gap-4 p-4;
+    @apply p-16-regular flex size-full gap-4 p-4;
   }
 
   /* TransformationForm Component */
@@ -370,7 +379,5 @@
 }
 
 .cl-userButtonOuterIdentifier {
-  font-size: 16px;
-  font-weight: 600;
-  color: #384262;
+  @apply text-darkblue-400 p-16-regular p-0;
 }

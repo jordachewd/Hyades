@@ -1,10 +1,9 @@
 "use client";
-
+import Image from "next/image";
+import Link from "next/link";
 import { navLinks } from "@/constants";
 import { SignedOut, UserButton } from "@clerk/clerk-react";
 import { SignedIn } from "@clerk/nextjs";
-import Image from "next/image";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "../ui/button";
 
@@ -39,13 +38,9 @@ export default function Sidebar() {
                     }`}
                   >
                     <Link className="sidebar-link" href={link.route}>
-                      <Image
-                        src={link.icon}
-                        alt={`${link.label} icon`}
-                        width={24}
-                        height={24}
-                        className={`${isActive && "brightness-200"}`}
-                      />
+                      <i
+                        className={`${link.bicon} text-[22px] brightness-200`}
+                      ></i>
                       {link.label}
                     </Link>
                   </li>
@@ -66,13 +61,9 @@ export default function Sidebar() {
                     }`}
                   >
                     <Link className="sidebar-link" href={link.route}>
-                      <Image
-                        src={link.icon}
-                        alt={`${link.label} icon`}
-                        width={24}
-                        height={24}
-                        className={`${isActive && "brightness-200"}`}
-                      />
+                      <i
+                        className={`${link.bicon} text-[20px] brightness-200`}
+                      ></i>
                       {link.label}
                     </Link>
                   </li>

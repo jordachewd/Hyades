@@ -2,42 +2,50 @@ export const navLinks = [
   {
     label: "Home",
     route: "/",
-    icon: "/assets/icons/home.svg",
+   // icon: "/assets/icons/home.svg",
+    bicon: "bi bi-house",
   },
   {
     label: "Image Restore",
     route: "/transformations/add/restore",
-    icon: "/assets/icons/image.svg",
+   // icon: "/assets/icons/image.svg",
+    bicon: "bi bi-image",
   },
   {
     label: "Generative Fill",
     route: "/transformations/add/fill",
-    icon: "/assets/icons/stars.svg",
+   // icon: "/assets/icons/stars.svg",
+    bicon: "bi bi-stars",
   },
   {
     label: "Object Remove",
     route: "/transformations/add/remove",
-    icon: "/assets/icons/scan.svg",
+   // icon: "/assets/icons/scan.svg",
+    bicon: "bi bi-eraser",
   },
   {
     label: "Object Recolor",
     route: "/transformations/add/recolor",
-    icon: "/assets/icons/filter.svg",
+   // icon: "/assets/icons/filter.svg",
+    bicon: "bi bi-palette",
   },
   {
     label: "Background Remove",
     route: "/transformations/add/removeBackground",
-    icon: "/assets/icons/camera.svg",
+   // icon: "/assets/icons/camera.svg",
+    bicon: "bi bi-camera",
   },
   {
     label: "Profile",
     route: "/profile",
-    icon: "/assets/icons/profile.svg",
+   // icon: "/assets/icons/profile.svg",
+    bicon: "bi bi-person",
   },
   {
     label: "Buy Credits",
     route: "/credits",
-    icon: "/assets/icons/bag.svg",
+  //  icon: "/assets/icons/bag.svg",
+    bicon: "bi bi-handbag",
   },
 ];
 
@@ -125,21 +133,24 @@ export const transformationTypes = {
     title: "Restore Image",
     subTitle: "Refine images by removing noise and imperfections",
     config: { restore: true },
-    icon: "image.svg",
+  //  icon: "image.svg",
+    bicon: "bi bi-house",
   },
   removeBackground: {
     type: "removeBackground",
     title: "Background Remove",
     subTitle: "Removes the background of the image using AI",
     config: { removeBackground: true },
-    icon: "camera.svg",
+  //  icon: "camera.svg",
+    bicon: "bi bi-camera",
   },
   fill: {
     type: "fill",
     title: "Generative Fill",
     subTitle: "Enhance an image's dimensions using AI outpainting",
     config: { fillBackground: true },
-    icon: "stars.svg",
+  //  icon: "stars.svg",
+    bicon: "bi bi-stars",
   },
   remove: {
     type: "remove",
@@ -148,7 +159,8 @@ export const transformationTypes = {
     config: {
       remove: { prompt: "", removeShadow: true, multiple: true },
     },
-    icon: "scan.svg",
+  //  icon: "scan.svg",
+    bicon: "bi bi-eraser",
   },
   recolor: {
     type: "recolor",
@@ -157,7 +169,8 @@ export const transformationTypes = {
     config: {
       recolor: { prompt: "", to: "", multiple: true },
     },
-    icon: "filter.svg",
+  //  icon: "filter.svg",
+    bicon: "bi bi-palette",
   },
 };
 
