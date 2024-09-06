@@ -34,13 +34,7 @@ export default function MobileNav() {
 
           <Sheet>
             <SheetTrigger>
-              <Image
-                src="/assets/icons/menu.svg"
-                alt="menu"
-                width={32}
-                height={32}
-                className="cursor-pointer"
-              />
+              <i className="bi bi-justify-right text-[28px] text-slate-500"></i>
             </SheetTrigger>
             <SheetContent className="sheet-content sm:w-64">
               <SheetHeader>
@@ -53,7 +47,7 @@ export default function MobileNav() {
                     priority
                   />
                 </SheetTitle>
-                <SheetDescription>
+                <SheetDescription className="text-left">
                   Where innovation meets imagination.
                 </SheetDescription>
               </SheetHeader>
@@ -72,12 +66,8 @@ export default function MobileNav() {
                         className="sidebar-link cursor-pointer"
                         href={link.route}
                       >
-                        <Image
-                          src={link.icon}
-                          alt={`${link.label} icon`}
-                          width={24}
-                          height={24}
-                        />
+                        <i className={`${link.bicon} text-[22px]`}></i>
+
                         {link.label}
                       </Link>
                     </li>
