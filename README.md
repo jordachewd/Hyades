@@ -1,4 +1,4 @@
-# Hyades AI SaaS Platform
+# Hyades
 
 _AI-Powered Image Editing and Asset Optimization Tool_
 
@@ -23,7 +23,9 @@ Software as a service (SaaS)
 - [Shadcn](https://ui.shadcn.com/)
 - [Tailwind CSS](https://tailwindcss.com/)
 
+<!--
 ### Resources
 
 - [Youtube Video](https://www.youtube.com/watch?v=Ahwoks_dawU)
 - [GitHub Project](https://github.com/adrianhajdin/ai_saas_app/blob/main/README.md)
+  -->
