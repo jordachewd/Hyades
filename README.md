@@ -6,6 +6,8 @@ _AI-Powered Image Editing and Asset Optimization Tool_
 
 :point_right: [See it in action](https://hyades.vercel.app/)
 
+<hr />
+
 ### Strategy
 
 Software as a service (SaaS)
