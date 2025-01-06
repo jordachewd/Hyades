@@ -1,11 +1,13 @@
 "use client";
-import Image from "next/image";
+
 import Link from "next/link";
 import { navLinks } from "@/constants";
 import { SignedOut, UserButton } from "@clerk/clerk-react";
 import { SignedIn } from "@clerk/nextjs";
 import { usePathname } from "next/navigation";
 import { Button } from "../ui/button";
+import Logo from "../ui/logo";
+ 
 
 export default function Sidebar() {
   const pathname = usePathname();
@@ -13,16 +15,7 @@ export default function Sidebar() {
   return (
     <aside className="sidebar">
       <div className="flex size-full flex-col gap-8">
-        <Link href="/" className="sidebar-logo">
-          <Image
-            src="/assets/images/hyades-logo.svg"
-            alt="logo"
-            width={120}
-            height={34}
-            priority
-          />
-        </Link>
-
+        <Logo />
         <nav className="sidebar-nav">
           <SignedIn>
             <ul className="sidebar-nav_elements">
