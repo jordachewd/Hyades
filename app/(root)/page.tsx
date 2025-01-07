@@ -4,8 +4,12 @@ import { getAllImages } from "@/lib/actions/image.actions";
 import Link from "next/link";
 
 export default async function Home({ searchParams }: SearchParamProps) {
-  const page = Number(searchParams?.page || 1);
-  const searchQuery = (searchParams?.query as string) || "";
+  const page = Number((await searchParams)?.page || 1);
+  const rawSearchQuery = (await searchParams)?.query;
+  const searchQuery = Array.isArray(rawSearchQuery)
+    ? rawSearchQuery.join(" ")
+    : rawSearchQuery || "";
+
   const images = await getAllImages({ page, searchQuery });
 
   return (
