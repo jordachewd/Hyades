@@ -1,6 +1,6 @@
 {
-  "name": "hyadesai",
-  "version": "0.1.0",
+  "name": "hyades",
+  "version": "1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
