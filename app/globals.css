@@ -71,27 +71,37 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground scroll-smooth;
   }
 }
 
 .auth {
-  @apply flex-center min-h-screen w-full bg-purple-100;
+  @apply flex-center min-h-screen w-full z-[1];
 }
 
 .root {
-  @apply flex min-h-screen w-full flex-col bg-white lg:flex-row;
+  @apply flex flex-col w-full h-dvh z-0 relative;
 }
 
 .root-container {
-  @apply mt-16 flex-1 overflow-auto py-8 lg:mt-0 lg:max-h-screen lg:py-10;
+  @apply flex flex-col flex-1 mt-16 py-8 lg:mt-0 lg:py-10 z-[1];
+  @apply overflow-y-auto relative [&::-webkit-scrollbar]:w-[4px];
+  @apply [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-thumb]:rounded-full;
+  @apply [&::-webkit-scrollbar-track]:bg-darkblue-400/10 [&::-webkit-scrollbar-thumb]:bg-orange-400;
+}
+
+.root-background {
+  @apply absolute flex h-full w-full z-0 top-0 left-0;
+  @apply bg-[length:16px_16px] bg-orange-100/50;
+  @apply bg-[radial-gradient(#4A4A4A15_1px,transparent_1px)];
 }
 
 /* ========================================== TAILWIND STYLES */
 @layer utilities {
   /* ===== UTILITIES */
+
   .wrapper {
-    @apply mx-auto px-5 md:px-10 w-full text-dark-400 p-16-regular;
+    @apply mx-auto px-5 md:px-10 w-full text-dark-400 p-16-regular max-w-[1600px];
   }
 
   .gradient-text {
@@ -131,6 +141,10 @@
   /* 24 */
   .p-24-bold {
     @apply font-bold text-[24px] leading-[120%];
+  }
+
+  .p-24-regular {
+    @apply font-normal text-[24px] leading-[120%];
   }
 
   /* 20 */
@@ -228,12 +242,43 @@
   }
 
   /* Home Page */
-  .home {
-    @apply sm:flex-center hidden  flex-col gap-4 rounded-[20px] border p-10 shadow-inner bg-darkblue-400;
+  .hero {
+    @apply sm:flex-center flex-col gap-10 p-10;
   }
 
-  .home-heading {
-    @apply h1-normal flex-wrap text-center text-white shadow-sm;
+  .hero-heading {
+    @apply h1-semibold flex-wrap text-center text-orange-500;
+  }
+
+  .hero-intro {
+    @apply p-16-regular text-center flex flex-col gap-2;
+  }
+
+  .hero-features {
+    @apply flex-center w-full gap-20 mt-6 flex-wrap;
+  }
+
+  .hero-features-link {
+    @apply flex-center flex-col gap-4;
+  }
+
+  .hero-features-icon {
+    @apply flex-center w-fit rounded-full bg-white text-dark-400;
+    @apply transition-all ease-out duration-500 p-6 border-2;
+    @apply hover:border-orange-400 hover:bg-orange-400 hover:text-white;
+  }
+
+  .hero-features-label {
+    @apply p-14-medium;
+  }
+
+  .hero-cta {
+    @apply flex-center mt-6;
+  }
+
+  .hero-cta-link {
+    @apply rounded-full bg-darkblue-400 text-white px-16 py-4;
+    @apply hover:bg-orange-400 transition-all ease-out p-24-regular duration-500;
   }
 
   /* Credits Page */
@@ -272,12 +317,17 @@
   }
 
   /* Collection Component */
+
+  .collection {
+    @apply flex flex-col sm:mt-12;
+  }
+
   .collection-heading {
     @apply md:flex-between mb-6 flex flex-col gap-5 md:flex-row;
   }
 
   .collection-list {
-    @apply grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4;
+    @apply grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5;
   }
 
   .collection-empty {
@@ -316,32 +366,40 @@
 
   /* Search Component */
   .search {
-    @apply flex w-full rounded-[16px] border-2 border-purple-200/20 bg-white px-4 shadow-sm shadow-purple-200/15 md:max-w-96;
+    @apply flex w-full rounded-[16px] border-2 md:max-w-96;
+    @apply border-purple-200/20 bg-white px-4 shadow-sm shadow-purple-200/15;
   }
 
-  /* Sidebar Component */
-  .sidebar {
-    @apply hidden h-screen w-72 bg-white p-5 shadow-md shadow-purple-200/50 lg:flex;
+  /* Topbar Component */
+  .topbar {
+    @apply hidden sticky w-full bg-white p-4 lg:flex z-10 top-0;
+    @apply border-b border-purple-100 shadow-sm shadow-purple-200/10;
   }
 
-  .sidebar-logo {
+  .topbar-logo {
     @apply flex items-center gap-2 md:py-2;
   }
 
-  .sidebar-nav {
-    @apply h-full flex-col justify-between md:flex md:gap-4;
+  .topbar-nav {
+    @apply flex w-full justify-between;
   }
 
-  .sidebar-nav_elements {
-    @apply hidden w-full flex-col items-start gap-2 md:flex;
+  .topbar-nav_elements {
+    @apply hidden gap-6 md:flex;
   }
 
-  .sidebar-nav_element {
-    @apply flex-center p-16-regular w-full whitespace-nowrap rounded-full bg-cover transition-all hover:bg-purple-100 hover:shadow-inner;
+  .topbar-nav_element {
+    @apply whitespace-nowrap inline-flex;
   }
 
-  .sidebar-link {
-    @apply p-16-regular flex size-full gap-4 p-4;
+  .topbar-link {
+    @apply flex gap-2 items-center;
+    @apply text-sm text-darkblue-400/60 font-light;
+    @apply hover:text-darkblue-400 transition-all;
+  }
+
+  .topbar-link_active {
+    @apply text-orange-400 hover:text-orange-400;
   }
 
   /* TransformationForm Component */

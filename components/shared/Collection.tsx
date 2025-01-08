@@ -45,7 +45,7 @@ export const Collection = ({
   };
 
   return (
-    <>
+    <section className="collection">
       <div className="collection-heading">
         <h2 className="h2-bold text-darkblue-400">Recent Edits</h2>
         {hasSearch && <Search />}
@@ -88,7 +88,7 @@ export const Collection = ({
           </PaginationContent>
         </Pagination>
       )}
-    </>
+    </section>
   );
 };
 
