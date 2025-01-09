@@ -41,7 +41,7 @@ export default async function Home({ searchParams }: SearchParamProps) {
               className="hero-features-link"
             >
               <span className="hero-features-icon">
-                <i className={`${link.bicon} text-[28px]`}></i>
+                <i className={link.bicon}></i>
               </span>
               <p className="hero-features-label">{link.label}</p>
             </Link>
@@ -49,6 +49,7 @@ export default async function Home({ searchParams }: SearchParamProps) {
         </div>
         <SignedOut>
           <div className="hero-cta">
+            <p className="hero-cta-intro">And much more ...</p>
             <Link href="/sign-in" className="hero-cta-link">
               Get Started
             </Link>

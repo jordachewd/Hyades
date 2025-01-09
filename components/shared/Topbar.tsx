@@ -1,16 +1,17 @@
 "use client";
-import Link from "next/link";
 import { navLinks } from "@/constants";
 import { SignedOut, UserButton } from "@clerk/clerk-react";
 import { SignedIn } from "@clerk/nextjs";
 import { usePathname } from "next/navigation";
 import Logo from "../ui/logo";
+import MobileNav from "./MobileNav";
+import Link from "next/link";
 
 export default function Topbar() {
   const pathname = usePathname();
 
   return (
-    <section className="topbar">
+    <header className="topbar">
       <nav className="topbar-nav">
         <Logo />
         <SignedIn>
@@ -55,6 +56,8 @@ export default function Topbar() {
               <UserButton signInUrl="/" />
             </li>
           </ul>
+
+          <MobileNav />
         </SignedIn>
         <SignedOut>
           <Link href="/sign-in" className="topbar-link">
@@ -63,6 +66,6 @@ export default function Topbar() {
           </Link>
         </SignedOut>
       </nav>
-    </section>
+    </header>
   );
 }

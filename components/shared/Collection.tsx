@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useSearchParams, useRouter } from "next/navigation";
 import { CldImage } from "next-cloudinary";
@@ -47,7 +46,7 @@ export const Collection = ({
   return (
     <section className="collection">
       <div className="collection-heading">
-        <h2 className="h2-bold text-darkblue-400">Recent Edits</h2>
+        <h2 className="h2-normal text-darkblue-400">Recent Edits</h2>
         {hasSearch && <Search />}
       </div>
 
@@ -103,19 +102,19 @@ const Card = ({ image }: { image: IImage }) => {
           height={image.height}
           {...image.config}
           loading="lazy"
-          className="h-52 w-full rounded-[10px] object-cover"
+          className="h-52 w-full object-cover"
           sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 33vw"
         />
-        <div className="flex-between p-2 pt-0">
-          <p className="p-20-semibold mr-3 line-clamp-1 text-darkblue-400">
+        <div className="flex-between p-3 pt-0">
+          <p className="p-16-regular mr-3 line-clamp-1 text-darkblue-400">
             {image.title}
           </p>
           <i
-            className={`${
+            className={
               transformationTypes[
                 image.transformationType as TransformationTypeKey
               ].bicon
-            } text-[24px]`}
+            }
           ></i>
         </div>
       </Link>

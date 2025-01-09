@@ -1,11 +1,9 @@
 import { auth } from "@clerk/nextjs/server";
-import Image from "next/image";
 import { redirect } from "next/navigation";
-
 import { Collection } from "@/components/shared/Collection";
-import Header from "@/components/shared/Header";
 import { getUserImages } from "@/lib/actions/image.actions";
 import { getUserById } from "@/lib/actions/user.actions";
+import Header from "@/components/shared/Header";
 
 const Profile = async ({ searchParams }: SearchParamProps) => {
   const { userId } = await auth();
@@ -21,30 +19,18 @@ const Profile = async ({ searchParams }: SearchParamProps) => {
       <Header title="Profile" />
 
       <section className="profile">
-        <div className="profile-balance">
+        <div className="profile-card">
           <p className="p-14-medium md:p-16-medium">CREDITS AVAILABLE</p>
           <div className="mt-4 flex items-center gap-4">
-            <Image
-              src="/assets/icons/coins.svg"
-              alt="coins"
-              width={50}
-              height={50}
-              className="size-9 md:size-12"
-            />
+            <i className="bi bi-credit-card-2-front text-5xl text-orange-400"></i>
             <h2 className="h2-bold text-dark-600">{user.creditBalance}</h2>
           </div>
         </div>
 
-        <div className="profile-image-manipulation">
+        <div className="profile-card">
           <p className="p-14-medium md:p-16-medium">IMAGE MANIPULATION DONE</p>
           <div className="mt-4 flex items-center gap-4">
-            <Image
-              src="/assets/icons/photo.svg"
-              alt="coins"
-              width={50}
-              height={50}
-              className="size-9 md:size-12"
-            />
+            <i className="bi bi-vignette text-5xl text-orange-400"></i>
             <h2 className="h2-bold text-dark-600">{images?.data.length}</h2>
           </div>
         </div>

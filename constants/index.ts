@@ -9,13 +9,13 @@ export const navLinks = [
     label: "Restore",
     route: "/transformations/add/restore",
 
-    bicon: "bi bi-image",
+    bicon: "bi bi-images",
   },
   {
     label: "Fill",
     route: "/transformations/add/fill",
 
-    bicon: "bi bi-stars",
+    bicon: "bi bi-paint-bucket",
   },
   {
     label: "Remove",
