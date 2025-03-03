@@ -17,11 +17,11 @@ Software as a service (SaaS)
 - [Next.js](https://nextjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [MongoDB](https://www.mongodb.com/)
-- [Clerk](https://clerk.com/docs)
-- [Cloudinary](https://cloudinary.com/)
-- [Stripe](https://stripe.com)
-- [Shadcn](https://ui.shadcn.com/)
 - [Tailwind CSS](https://tailwindcss.com/)
+- [Shadcn](https://ui.shadcn.com/)
+- [Cloudinary](https://cloudinary.com/)
+- [Clerk](https://clerk.com/docs)
+- [Stripe](https://stripe.com)
 
 <!--
 ### Resources
