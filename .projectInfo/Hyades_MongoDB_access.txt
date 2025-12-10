@@ -1,5 +1,0 @@
-DB User: floriniordache
-DB Pass: AIHYgpEhp7PvXKQY
-
-
-mongodb+srv://floriniordache:AIHYgpEhp7PvXKQY@hyades.hu6wt.mongodb.net/
