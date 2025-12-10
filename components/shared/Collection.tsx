@@ -16,17 +16,19 @@ import { formUrlQuery } from "@/lib/utils";
 import { Button } from "../ui/button";
 import { Search } from "./Search";
 
+type CollectionType = {
+  images: IImage[];
+  totalPages?: number;
+  page: number;
+  hasSearch?: boolean;
+};
+
 export const Collection = ({
   hasSearch = false,
   images,
   totalPages = 1,
   page,
-}: {
-  images: IImage[];
-  totalPages?: number;
-  page: number;
-  hasSearch?: boolean;
-}) => {
+}: CollectionType) => {
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -53,7 +55,7 @@ export const Collection = ({
       {images.length > 0 ? (
         <ul className="collection-list">
           {images.map((image) => (
-            <Card image={image} key={image._id as string} />
+            <Card image={image} key={String(image._id)} />
           ))}
         </ul>
       ) : (
