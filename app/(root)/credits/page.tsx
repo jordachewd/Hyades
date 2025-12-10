@@ -2,7 +2,6 @@ import { SignedIn } from "@clerk/nextjs";
 import { auth } from "@clerk/nextjs/server";
 import Image from "next/image";
 import { redirect } from "next/navigation";
-
 import Header from "@/components/shared/Header";
 import { Button } from "@/components/ui/button";
 import { plans } from "@/constants";
@@ -10,7 +9,7 @@ import { getUserById } from "@/lib/actions/user.actions";
 import Checkout from "@/components/shared/Checkout";
 
 const Credits = async () => {
-  const { userId } = auth();
+  const { userId } = await auth();
 
   if (!userId) redirect("/sign-in");
 
@@ -19,7 +18,7 @@ const Credits = async () => {
   return (
     <>
       <Header
-        title="Buy Credits"
+        title="Upgrade your plan"
         subtitle="Choose a credit package that suits your needs!"
       />
 
@@ -29,14 +28,14 @@ const Credits = async () => {
             <li key={plan.name} className="credits-item">
               <div className="flex-center flex-col gap-3">
                 <Image src={plan.icon} alt="check" width={50} height={50} />
-                <p className="p-20-semibold mt-2 text-purple-500">
+                <p className="p-20-semibold mt-2 text-darkblue-400">
                   {plan.name}
                 </p>
-                <p className="h1-semibold text-dark-600">${plan.price}</p>
+                <p className="h1-semibold text-darkblue-400">${plan.price}</p>
                 <p className="p-16-regular">{plan.credits} Credits</p>
               </div>
 
-              {/* Inclusions */}
+             
               <ul className="flex flex-col gap-5 py-9">
                 {plan.inclusions.map((inclusion) => (
                   <li

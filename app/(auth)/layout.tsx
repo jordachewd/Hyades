@@ -1,3 +1,8 @@
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return <main className="auth">{children}</main>;
+  return (
+    <div className="flex w-full h-dvh relative">
+      <main className="auth">{children}</main>
+      <div className="root-background"></div>
+    </div>
+  );
 }

@@ -1,18 +1,17 @@
-import { auth } from "@clerk/nextjs/server";
 import Image from "next/image";
 import Link from "next/link";
-
 import Header from "@/components/shared/Header";
 import TransformedImage from "@/components/shared/TransformedImage";
+import { auth } from "@clerk/nextjs/server";
 import { Button } from "@/components/ui/button";
 import { getImageById } from "@/lib/actions/image.actions";
 import { getImageSize } from "@/lib/utils";
 import { DeleteConfirmation } from "@/components/shared/DeleteConfirmation";
 
-const ImageDetails = async ({ params: { id } }: SearchParamProps) => {
-  // const { userId } = auth();
-  const { userId }: { userId: string | null } = auth();
-
+const ImageDetails = async ({ params }: SearchParamProps) => {
+  const awaitedParams = await params;
+  const { id } = awaitedParams;
+  const { userId }: { userId: string | null } = await auth();
   const image = await getImageById(id);
 
   return (
@@ -85,7 +84,7 @@ const ImageDetails = async ({ params: { id } }: SearchParamProps) => {
         </div>
 
         {userId === image.author.clerkId && (
-          <div className="mt-4 space-y-4">
+          <div className="mt-4 flex gap-4 justify-between">
             <Button asChild type="button" className="submit-button capitalize">
               <Link href={`/transformations/${image._id}/update`}>
                 Update Image

@@ -71,27 +71,38 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground scroll-smooth;
   }
 }
 
 .auth {
-  @apply flex-center min-h-screen w-full bg-purple-100;
+  @apply flex-center min-h-screen w-full z-[1];
 }
 
 .root {
-  @apply flex min-h-screen w-full flex-col bg-white lg:flex-row;
+  @apply flex flex-col w-full h-dvh z-0 relative;
 }
 
 .root-container {
-  @apply mt-16 flex-1 overflow-auto py-8 lg:mt-0 lg:max-h-screen lg:py-10;
+  @apply flex flex-col flex-1  py-8 lg:mt-0 lg:py-10 z-[1];
+  @apply overflow-y-auto relative [&::-webkit-scrollbar]:w-[4px];
+  @apply [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-thumb]:rounded-full;
+  @apply [&::-webkit-scrollbar-track]:bg-darkblue-400/10 [&::-webkit-scrollbar-thumb]:bg-orange-400;
+}
+
+.root-background {
+  @apply absolute flex h-full w-full z-0 top-0 left-0;
+  @apply bg-[length:16px_16px] bg-orange-100/50;
+  @apply bg-[radial-gradient(#4A4A4A15_1px,transparent_1px)];
 }
 
 /* ========================================== TAILWIND STYLES */
 @layer utilities {
   /* ===== UTILITIES */
+
   .wrapper {
-    @apply max-w-5xl mx-auto px-5 md:px-10 w-full text-dark-400 p-16-regular;
+    @apply mx-auto px-5 md:px-10 w-full gap-8 flex flex-col;
+    @apply text-dark-400 p-16-regular max-w-[1600px];
   }
 
   .gradient-text {
@@ -109,23 +120,36 @@
 
   /* ===== TYPOGRAPHY */
   /* 44 */
+
+  .h1-normal {
+    @apply text-[32px] font-normal sm:text-[44px] leading-[120%] sm:leading-[56px];
+  }
+
   .h1-semibold {
-    @apply text-[36px] font-semibold sm:text-[44px] leading-[120%] sm:leading-[56px];
+    @apply text-[32px] font-semibold sm:text-[44px] leading-[120%] sm:leading-[56px];
   }
 
   /* 36 */
+  .h2-normal {
+    @apply text-[30px] font-normal md:text-[36px] leading-[110%];
+  }
+
   .h2-bold {
-    @apply text-[30px] font-bold md:text-[36px] leading-[110%];
+    @apply text-[30px] font-semibold md:text-[36px] leading-[110%];
   }
 
   /* 30 */
   .h3-bold {
-    @apply font-bold text-[30px] leading-[140%];
+    @apply font-medium text-[24px] leading-[140%];
   }
 
   /* 24 */
   .p-24-bold {
     @apply font-bold text-[24px] leading-[120%];
+  }
+
+  .p-24-regular {
+    @apply font-normal text-[24px] leading-[120%];
   }
 
   /* 20 */
@@ -142,7 +166,15 @@
     @apply font-semibold text-[18px] leading-[140%];
   }
 
+  .p-18-regular {
+    @apply font-normal text-[18px] leading-[140%];
+  }
+
   /* 16 */
+  .p-16-regular {
+    @apply font-normal text-[16px] leading-[140%];
+  }
+
   .p-16-semibold {
     @apply font-semibold text-[16px] leading-[140%];
   }
@@ -155,9 +187,17 @@
     @apply font-normal text-[16px] leading-[140%];
   }
 
+  .p-16-light {
+    @apply font-light text-[16px] leading-[140%];
+  }
+
   /* 14 */
   .p-14-medium {
     @apply font-medium text-[14px] leading-[120%];
+  }
+
+  .p-14-light {
+    @apply font-light text-[14px] leading-[120%];
   }
 
   /* 10 */
@@ -175,15 +215,19 @@
   }
 
   .dropdown-item {
-    @apply p-16-semibold text-dark-700 cursor-pointer transition-all px-4 py-3 rounded-none outline-none hover:border-none focus-visible:ring-transparent hover:text-white hover:bg-purple-gradient hover:bg-cover focus-visible:ring-offset-0 focus-visible:outline-none !important;
+    @apply p-16-semibold text-dark-700 cursor-pointer transition-all px-4 py-3 rounded-none outline-none hover:border-none !important;
+    @apply focus-visible:ring-transparent hover:text-white hover:bg-purple-gradient hover:bg-cover focus-visible:ring-offset-0 focus-visible:outline-none !important;
   }
 
   .input-field {
-    @apply rounded-[16px] border-2 border-purple-200/20 shadow-sm shadow-purple-200/15 text-dark-600 disabled:opacity-100 p-16-semibold h-[50px] md:h-[54px] focus-visible:ring-offset-0 px-4 py-3 focus-visible:ring-transparent !important;
+    @apply rounded-[16px] border-2 shadow-sm disabled:opacity-100 px-4 py-3 h-[50px] md:h-[54px] !important;
+    @apply p-16-regular focus-visible:ring-offset-0 focus-visible:ring-transparent !important;
+    @apply border-orange-400/15 shadow-darkblue-400/5 text-darkblue-400 !important;
   }
 
   .search-field {
-    @apply border-0 bg-transparent text-dark-600 w-full placeholder:text-dark-400 h-[50px] p-16-medium focus-visible:ring-offset-0 p-3 focus-visible:ring-transparent !important;
+    @apply border-0 bg-transparent text-dark-600 w-full placeholder:text-dark-400 h-[50px] p-16-regular !important;
+    @apply focus-visible:ring-offset-0 p-3 focus-visible:ring-transparent !important;
   }
 
   .submit-button {
@@ -191,7 +235,10 @@
   }
 
   .select-field {
-    @apply w-full border-2 border-purple-200/20 shadow-sm shadow-purple-200/15 rounded-[16px] h-[50px] md:h-[54px] text-dark-600 p-16-semibold disabled:opacity-100 placeholder:text-dark-400/50 px-4 py-3 focus:ring-offset-0 focus-visible:ring-transparent focus:ring-transparent focus-visible:ring-0 focus-visible:outline-none !important;
+    @apply w-full border-2 shadow-sm rounded-[16px] h-[50px] md:h-[54px] !important;
+    @apply p-16-regular disabled:opacity-100 placeholder:text-dark-400/50 px-4 py-3 focus:ring-offset-0 !important;
+    @apply focus-visible:ring-transparent focus:ring-transparent focus-visible:ring-0 focus-visible:outline-none !important;
+    @apply border-orange-400/15 shadow-darkblue-400/5 text-darkblue-400 !important;
   }
 
   .select-trigger {
@@ -206,10 +253,6 @@
     @apply focus-visible:ring-transparent focus:ring-offset-0 focus-visible:ring-offset-0 focus-visible:outline-none focus-visible:border-none !important;
   }
 
-  .sheet-content button {
-    @apply focus:ring-0 focus-visible:ring-transparent focus:ring-offset-0 focus-visible:ring-offset-0 focus-visible:outline-none focus-visible:border-none !important;
-  }
-
   .success-toast {
     @apply bg-green-100 text-green-900;
   }
@@ -219,12 +262,57 @@
   }
 
   /* Home Page */
-  .home {
-    @apply sm:flex-center hidden h-72 flex-col gap-4 rounded-[20px] border p-10 shadow-inner bg-darkblue-400;
+  .hero {
+    @apply flex-center flex-col gap-10;
   }
 
-  .home-heading {
-    @apply h1-semibold max-w-[500px] flex-wrap text-center text-white shadow-sm;
+  .hero-heading {
+    @apply h1-normal flex-wrap text-center text-orange-400;
+  }
+
+  .hero-intro {
+    @apply p-16-regular text-center flex flex-col gap-2;
+  }
+
+  .hero-features {
+    @apply flex-center w-full flex-wrap gap-6 md:gap-14 lg:gap-20;
+  }
+
+  .hero-features-link {
+    @apply flex-center flex-col gap-2 basis-1/3 md:basis-0;
+  }
+
+  .hero-features-icon {
+    @apply flex-center w-fit;
+    @apply transition-all ease-out duration-500 p-4;
+  }
+
+  .hero-features-icon > i {
+    @apply text-[40px];
+  }
+
+  .hero-features-label {
+    @apply p-14-medium transition-all ease-out duration-500;
+  }
+
+  .hero-features-link:hover .hero-features-icon,
+  .hero-features-link:hover .hero-features-label {
+    @apply text-darkblue-400;
+  }
+
+  .hero-cta {
+    @apply flex-center flex-col gap-8;
+  }
+
+  .hero-cta-intro {
+    @apply p-14-light text-center;
+  }
+
+  .hero-cta-link {
+    @apply rounded-full px-12 md:px-20 py-4 border-2 p-16-regular md:p-24-regular;
+    @apply border-darkblue-400 text-darkblue-400;
+    @apply transition-all ease-out duration-500;
+    @apply hover:text-orange-400 hover:border-orange-400;
   }
 
   /* Credits Page */
@@ -233,11 +321,12 @@
   }
 
   .credits-item {
-    @apply w-full rounded-[16px] border-2 border-purple-200/20 bg-white p-8 shadow-xl shadow-purple-200/20 lg:max-w-none;
+    @apply w-full rounded-[16px] border-2 p-8 shadow-xl lg:max-w-none;
+    @apply border-orange-400/15 bg-white shadow-darkblue-400/5;
   }
 
   .credits-btn {
-    @apply w-full rounded-full bg-purple-100 bg-cover text-purple-500 hover:text-purple-500;
+    @apply w-full rounded-full bg-purple-100 bg-cover text-darkblue-400 hover:text-purple-500;
   }
 
   /* Profile Page */
@@ -245,12 +334,9 @@
     @apply mt-5 flex flex-col gap-5 sm:flex-row md:mt-8 md:gap-10;
   }
 
-  .profile-balance {
-    @apply w-full rounded-[16px] border-2 border-purple-200/20 bg-white p-5 shadow-lg shadow-purple-200/10 md:px-6 md:py-8;
-  }
-
-  .profile-image-manipulation {
-    @apply w-full rounded-[16px] border-2 border-purple-200/20 bg-white p-5 shadow-lg shadow-purple-200/10 md:px-6 md:py-8;
+  .profile-card {
+    @apply w-full rounded-[16px] border-2 p-5 shadow-lg md:px-6 md:py-8;
+    @apply border-orange-400/15 bg-white shadow-darkblue-400/5;
   }
 
   /* Transformation Details */
@@ -263,12 +349,17 @@
   }
 
   /* Collection Component */
+
+  .collection {
+    @apply flex flex-col sm:mt-12;
+  }
+
   .collection-heading {
     @apply md:flex-between mb-6 flex flex-col gap-5 md:flex-row;
   }
 
   .collection-list {
-    @apply grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3;
+    @apply grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5;
   }
 
   .collection-empty {
@@ -280,7 +371,8 @@
   }
 
   .collection-card {
-    @apply flex flex-1 cursor-pointer flex-col gap-5 rounded-[16px] border-2 border-purple-200/15 bg-white p-4 shadow-xl shadow-purple-200/10 transition-all hover:shadow-purple-200/20;
+    @apply flex cursor-pointer flex-col gap-4 rounded-[16px] transition-all overflow-hidden;
+    @apply hover:shadow-darkblue-400/20 bg-white shadow-md hover:shadow-lg shadow-darkblue-400/5;
   }
 
   /* MediaUploader Component */
@@ -296,43 +388,85 @@
     @apply rounded-[16px] bg-white  p-5 shadow-sm shadow-purple-200/50;
   }
 
-  /* Navbar Component */
-  .header {
-    @apply flex-between fixed h-16 w-full border-b-4 border-purple-100 bg-white p-5 lg:hidden;
-  }
-
-  .header-nav_elements {
-    @apply mt-8 flex w-full flex-col items-start gap-5;
-  }
-
   /* Search Component */
   .search {
-    @apply flex w-full rounded-[16px] border-2 border-purple-200/20 bg-white px-4 shadow-sm shadow-purple-200/15 md:max-w-96;
+    @apply flex w-full rounded-[16px] border-2 md:max-w-96 px-4 shadow-sm;
+    @apply border-orange-400/15 shadow-darkblue-400/5 bg-white;
   }
 
-  /* Sidebar Component */
-  .sidebar {
-    @apply hidden h-screen w-72 bg-white p-5 shadow-md shadow-purple-200/50 lg:flex;
+  /* Topbar Component */
+  .topbar {
+    @apply sticky w-full bg-white p-4 flex z-10 top-0 border-b;
+    @apply border-purple-100 shadow-sm shadow-purple-200/10;
   }
 
-  .sidebar-logo {
+  .topbar-logo {
     @apply flex items-center gap-2 md:py-2;
   }
 
-  .sidebar-nav {
-    @apply h-full flex-col justify-between md:flex md:gap-4;
+  .topbar-nav {
+    @apply flex w-full justify-between;
   }
 
-  .sidebar-nav_elements {
-    @apply hidden w-full flex-col items-start gap-2 md:flex;
+  .topbar-nav_elements {
+    @apply hidden gap-6 lg:flex;
   }
 
-  .sidebar-nav_element {
-    @apply flex-center p-16-semibold w-full whitespace-nowrap rounded-full bg-cover  transition-all hover:bg-purple-100 hover:shadow-inner;
+  .topbar-nav_element {
+    @apply whitespace-nowrap inline-flex;
   }
 
-  .sidebar-link {
-    @apply p-16-semibold flex size-full gap-4 p-4;
+  .topbar-link {
+    @apply flex gap-2 items-center;
+    @apply text-sm font-light transition-all;
+    @apply hover:text-orange-400 text-dark-400;
+  }
+
+  .topbar-link_active {
+    @apply text-orange-400 hover:text-orange-400;
+  }
+
+  /* MobileNav Component */
+
+  .mobilenav {
+    @apply flex lg:hidden;
+  }
+
+  .mobilenav_trigger {
+    @apply text-3xl text-slate-500;
+  }
+
+  .mobilenav_elements {
+    @apply flex w-full flex-col items-start gap-4;
+  }
+
+  .mobilenav_element {
+    @apply flex whitespace-nowrap text-dark-400;
+  }
+
+  .mobilenav_link {
+    @apply flex-center gap-4;
+  }
+
+  .mobilenav_link_active {
+    @apply text-darkblue-400;
+  }
+
+  .mobilenav_link > i {
+    @apply text-2xl;
+  }
+
+  .mobilenav_content {
+    @apply flex flex-col gap-8;
+  }
+
+  .mobilenav_content button {
+    @apply focus:ring-0 focus-visible:ring-transparent focus:ring-offset-0 focus-visible:ring-offset-0 !important;
+    @apply focus-visible:outline-none focus-visible:border-none !important;
+  }
+
+  .mobilenav_content button > svg {
+    @apply w-6 h-6;
   }
 
   /* TransformationForm Component */
@@ -370,7 +504,5 @@
 }
 
 .cl-userButtonOuterIdentifier {
-  font-size: 16px;
-  font-weight: 600;
-  color: #384262;
+  @apply text-darkblue-400 p-16-regular p-0;
 }

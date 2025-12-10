@@ -1,47 +1,70 @@
 import { Collection } from "@/components/shared/Collection";
 import { navLinks } from "@/constants";
+import { SignedIn, SignedOut } from "@clerk/nextjs";
 import { getAllImages } from "@/lib/actions/image.actions";
-import Image from "next/image";
 import Link from "next/link";
 
 export default async function Home({ searchParams }: SearchParamProps) {
-  const page = Number(searchParams?.page || 1);
-  const searchQuery = (searchParams?.query as string) || "";
+  const page = Number((await searchParams)?.page || 1);
+  const rawSearchQuery = (await searchParams)?.query;
+  const searchQuery = Array.isArray(rawSearchQuery)
+    ? rawSearchQuery.join(" ")
+    : rawSearchQuery || "";
+
   const images = await getAllImages({ page, searchQuery });
 
   return (
     <>
-      <section className="home">
-        <h1 className="home-heading">Transform Your Vision with Hyades AI</h1>
-        <ul className="flex-center w-full gap-20 mt-6">
+      <section className="hero">
+        <h1 className="hero-heading">
+          Redefine Your Images
+          <br />
+          Effortlessly
+        </h1>
+
+        <div className="hero-intro">
+          <p>Transform your visual assets with AI-driven precision.</p>
+          <p>
+            Restore, recolor and repurpose your images in minutes - no reshoots,
+            no hassle.
+          </p>
+          <p>
+            Try Hyades today and unleash the full potential of your creativity!
+          </p>
+        </div>
+
+        <div className="hero-features">
           {navLinks.slice(1, 5).map((link) => (
             <Link
               key={link.route}
               href={link.route}
-              className="flex-center flex-col gap-2"
+              className="hero-features-link"
             >
-              <li className="flex-center w-fit rounded-full bg-white p-4">
-                <Image
-                  src={link.icon}
-                  alt={link.label + " icon"}
-                  width={24}
-                  height={24}
-                />
-              </li>
-              <p className="p-14-medium center text-white"> {link.label}</p>
+              <span className="hero-features-icon">
+                <i className={link.bicon}></i>
+              </span>
+              <p className="hero-features-label">{link.label}</p>
             </Link>
           ))}
-        </ul>
+        </div>
+        <SignedOut>
+          <div className="hero-cta">
+            <p className="hero-cta-intro">And much more ...</p>
+            <Link href="/sign-in" className="hero-cta-link">
+              Get Started
+            </Link>
+          </div>
+        </SignedOut>
       </section>
 
-      <section className="sm:mt-12">
+      <SignedIn>
         <Collection
           hasSearch={true}
           images={images?.data}
           totalPages={images?.totalPage}
           page={page}
         />
-      </section>
+      </SignedIn>
     </>
   );
 }
