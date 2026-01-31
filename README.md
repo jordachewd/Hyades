@@ -2,13 +2,9 @@
 
 _AI-Powered Image Editing and Asset Optimization Tool_
 
-<div>
-
 [![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://hyades.vercel.app/)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.7-blue)](https://www.typescriptlang.org/)
-
-</div>
 
 ---
 
