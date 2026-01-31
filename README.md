@@ -1,82 +1,79 @@
-<p align="center">
-  <img src="public/assets/images/hyades-logo.svg" alt="Hyades Logo" width="280"/>
-</p>
+# Hyades
 
-<h1 align="center">Hyades</h1>
+<div align="center">
 
-<p align="center">
-  <strong>AI-Powered Image Editing and Asset Optimization Tool</strong>
-</p>
+![Hyades](public/assets/images/hyades-logo.svg)
 
-<p align="center">
-  <a href="https://hyades.vercel.app/">View Demo</a>
-  ·
-  <a href="#features">Features</a>
-  ·
-  <a href="#tech-stack">Tech Stack</a>
-  ·
-  <a href="#getting-started">Getting Started</a>
-</p>
+_AI-Powered Image Editing and Asset Optimization Tool_
+
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://hyades.vercel.app/)
+[![Next.js](https://img.shields.io/badge/Next.js-16-black)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.7-blue)](https://www.typescriptlang.org/)
+
+</div>
 
 ---
 
-## 📖 About
+## About
 
-**Hyades** is a modern Software-as-a-Service (SaaS) application that leverages advanced AI technology to simplify and accelerate image editing and transformation workflows. 
+**Hyades** is a modern Software-as-a-Service (SaaS) application that leverages advanced AI technology to simplify and accelerate image editing and transformation workflows.
 
 Whether you're a creative professional, a marketing team, or a brand looking to optimize visual assets, Hyades provides powerful tools to transform your images in minutes—eliminating the need for costly reshoots and time-consuming manual edits.
 
-> *Named after the star cluster in the constellation Taurus, Hyades brings clarity and brilliance to your visual content.*
+> _Named after the star cluster in the constellation Taurus, Hyades brings clarity and brilliance to your visual content._
 
 ---
 
-## ✨ Features
+## Features
 
-| Feature | Description |
-|---------|-------------|
-| 🔧 **Image Restore** | Refine images by removing noise, artifacts, and imperfections using AI |
-| 🎨 **Generative Fill** | Enhance image dimensions using AI-powered outpainting |
-| 🗑️ **Object Remove** | Intelligently remove unwanted objects from images |
-| 🎭 **Object Recolor** | Change colors of specific objects within images |
-| 🖼️ **Background Remove** | Automatically remove image backgrounds with precision |
-| 💳 **Credit System** | Flexible credit-based pricing with Free, Pro, and Premium plans |
-| 👤 **User Profiles** | Personal dashboard to manage transformations and credits |
-| 🔐 **Secure Authentication** | Enterprise-grade auth with Clerk |
-| 💰 **Stripe Payments** | Secure payment processing for credit purchases |
+| Feature                   | Description                                                            |
+| ------------------------- | ---------------------------------------------------------------------- |
+| **Image Restore**         | Refine images by removing noise, artifacts, and imperfections using AI |
+| **Generative Fill**       | Enhance image dimensions using AI-powered outpainting                  |
+| **Object Remove**         | Intelligently remove unwanted objects from images                      |
+| **Object Recolor**        | Change colors of specific objects within images                        |
+| **Background Remove**     | Automatically remove image backgrounds with precision                  |
+| **Credit System**         | Flexible credit-based pricing with Free, Pro, and Premium plans        |
+| **User Profiles**         | Personal dashboard to manage transformations and credits               |
+| **Secure Authentication** | Enterprise-grade auth with Clerk                                       |
+| **Stripe Payments**       | Secure payment processing for credit purchases                         |
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
-| Technology | Purpose |
-|------------|---------|
-| [Next.js 16](https://nextjs.org/) | React framework with App Router |
-| [React 19](https://react.dev/) | UI library |
-| [TypeScript](https://www.typescriptlang.org/) | Type-safe JavaScript |
-| [Tailwind CSS](https://tailwindcss.com/) | Utility-first CSS framework |
-| [Shadcn/ui](https://ui.shadcn.com/) | Accessible component library |
-| [React Hook Form](https://react-hook-form.com/) | Form handling |
-| [Zod](https://zod.dev/) | Schema validation |
+
+| Technology                                      | Purpose                         |
+| ----------------------------------------------- | ------------------------------- |
+| [Next.js 16](https://nextjs.org/)               | React framework with App Router |
+| [React 19](https://react.dev/)                  | UI library                      |
+| [TypeScript](https://www.typescriptlang.org/)   | Type-safe JavaScript            |
+| [Tailwind CSS](https://tailwindcss.com/)        | Utility-first CSS framework     |
+| [Shadcn/ui](https://ui.shadcn.com/)             | Accessible component library    |
+| [React Hook Form](https://react-hook-form.com/) | Form handling                   |
+| [Zod](https://zod.dev/)                         | Schema validation               |
 
 ### Backend & Database
-| Technology | Purpose |
-|------------|---------|
-| [MongoDB](https://www.mongodb.com/) | NoSQL database |
-| [Mongoose](https://mongoosejs.com/) | MongoDB ODM |
+
+| Technology                                                                                         | Purpose                  |
+| -------------------------------------------------------------------------------------------------- | ------------------------ |
+| [MongoDB](https://www.mongodb.com/)                                                                | NoSQL database           |
+| [Mongoose](https://mongoosejs.com/)                                                                | MongoDB ODM              |
 | [Next.js API Routes](https://nextjs.org/docs/app/building-your-application/routing/route-handlers) | Serverless API endpoints |
 
 ### Services & Integrations
-| Technology | Purpose |
-|------------|---------|
+
+| Technology                            | Purpose                          |
+| ------------------------------------- | -------------------------------- |
 | [Cloudinary](https://cloudinary.com/) | AI-powered image transformations |
-| [Clerk](https://clerk.com/) | Authentication & user management |
-| [Stripe](https://stripe.com/) | Payment processing |
-| [Svix](https://www.svix.com/) | Webhook handling |
+| [Clerk](https://clerk.com/)           | Authentication & user management |
+| [Stripe](https://stripe.com/)         | Payment processing               |
+| [Svix](https://www.svix.com/)         | Webhook handling                 |
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 hyades/
@@ -163,7 +160,7 @@ hyades/
 
 ---
 
-## ⚙️ Environment Variables
+## Environment Variables
 
 Create a `.env.local` file in the root directory with the following variables:
 
@@ -207,7 +204,7 @@ NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -221,12 +218,14 @@ NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/yourusername/hyades.git
    cd hyades
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    # or
@@ -244,6 +243,7 @@ NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
    - Configure Stripe webhook endpoint: `https://yourdomain.com/api/webhooks/stripe`
 
 5. **Run the development server**
+
    ```bash
    npm run dev
    # or
@@ -256,28 +256,28 @@ NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ---
 
-## 📜 Available Scripts
+## Available Scripts
 
-| Script | Description |
-|--------|-------------|
-| `npm run dev` | Start development server |
-| `npm run build` | Build for production |
-| `npm run start` | Start production server |
-| `npm run lint` | Run ESLint |
+| Script          | Description              |
+| --------------- | ------------------------ |
+| `npm run dev`   | Start development server |
+| `npm run build` | Build for production     |
+| `npm run start` | Start production server  |
+| `npm run lint`  | Run ESLint               |
 
 ---
 
 ## 💳 Credit Plans
 
-| Plan | Price | Credits | Features |
-|------|-------|---------|----------|
-| **Free** | $0 | 10 | Basic access to services |
-| **Pro** | $39 | 200 | Full access + Priority support |
-| **Premium** | $199 | 3,000 | Full access + Priority support + Priority updates |
+| Plan        | Price | Credits | Features                                          |
+| ----------- | ----- | ------- | ------------------------------------------------- |
+| **Free**    | $0    | 10      | Basic access to services                          |
+| **Pro**     | $39   | 200     | Full access + Priority support                    |
+| **Premium** | $199  | 3,000   | Full access + Priority support + Priority updates |
 
 ---
 
-## 🔒 Security
+## Security
 
 - Authentication handled by Clerk with enterprise-grade security
 - All payments processed securely through Stripe
@@ -288,24 +288,12 @@ For security concerns, please see [SECURITY.md](SECURITY.md).
 
 ---
 
-## 📄 License
+## License
 
 This project is private and proprietary.
 
 ---
 
-## 👤 Author
+## Author
 
-**JordacheWD**
-
----
-
-<p align="center">
-  <strong>⭐ Star this repository if you find it helpful!</strong>
-</p>
-
-<p align="center">
-  <a href="https://hyades.vercel.app/">
-    <img src="https://img.shields.io/badge/Demo-Live-brightgreen?style=for-the-badge" alt="Live Demo"/>
-  </a>
-</p>
+Made with ❤️ by [JordacheWD](https://jordachewd.com/)
