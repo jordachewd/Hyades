@@ -259,7 +259,7 @@ NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ---
 
-## 💳 Credit Plans
+## Credit Plans
 
 | Plan        | Price | Credits | Features                                          |
 | ----------- | ----- | ------- | ------------------------------------------------- |
@@ -275,8 +275,6 @@ NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 - All payments processed securely through Stripe
 - Webhook signatures verified using Svix
 - Environment variables for sensitive data
-
-For security concerns, please see [SECURITY.md](SECURITY.md).
 
 ---
 
