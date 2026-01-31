@@ -228,7 +228,7 @@ NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 3. **Set up environment variables**
    - Copy `.env.example` to `.env.local`
-   - Fill in your credentials (see [Environment Variables](#️-environment-variables))
+   - Fill in your credentials (see Environment Variables)
 
 4. **Set up webhooks**
    - Configure Clerk webhook endpoint: `https://yourdomain.com/api/webhooks/clerk`
