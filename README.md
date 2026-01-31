@@ -16,21 +16,17 @@ Whether you're a creative professional, a marketing team, or a brand looking to 
 
 > _Named after the star cluster in the constellation Taurus, Hyades brings clarity and brilliance to your visual content._
 
----
+### Key Features
 
-## Features
-
-| Feature                   | Description                                                            |
-| ------------------------- | ---------------------------------------------------------------------- |
-| **Image Restore**         | Refine images by removing noise, artifacts, and imperfections using AI |
-| **Generative Fill**       | Enhance image dimensions using AI-powered outpainting                  |
-| **Object Remove**         | Intelligently remove unwanted objects from images                      |
-| **Object Recolor**        | Change colors of specific objects within images                        |
-| **Background Remove**     | Automatically remove image backgrounds with precision                  |
-| **Credit System**         | Flexible credit-based pricing with Free, Pro, and Premium plans        |
-| **User Profiles**         | Personal dashboard to manage transformations and credits               |
-| **Secure Authentication** | Enterprise-grade auth with Clerk                                       |
-| **Stripe Payments**       | Secure payment processing for credit purchases                         |
+- **Image Restore** — Refine images by removing noise, artifacts, and imperfections using AI
+- **Generative Fill** — Enhance image dimensions using AI-powered outpainting
+- **Object Remove** — Intelligently remove unwanted objects from images
+- **Object Recolor** — Change colors of specific objects within images
+- **Background Remove** — Automatically remove image backgrounds with precision
+- **Credit System** — Flexible credit-based pricing with Free, Pro, and Premium plans
+- **User Profiles** — Personal dashboard to manage transformations and credits
+- **Secure Authentication** — Enterprise-grade auth with Clerk
+- **Stripe Payments** — Secure payment processing for credit purchases
 
 ---
 
