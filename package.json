@@ -1,7 +1,8 @@
 {
   "name": "hyades",
-  "version": "1.0",
+  "version": "1.0.0",
   "private": true,
+  "author": "JordacheWD",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -25,7 +26,7 @@
     "lucide-react": "^0.556.0",
     "mongodb": "^7.0.0",
     "mongoose": "^9.0.1",
-    "next": "16.0.10",
+    "next": "^16.1.6",
     "next-cloudinary": "^6.16.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -41,6 +42,7 @@
     "@types/qs": "^6.9.17",
     "@types/react": "^19.0.3",
     "@types/react-dom": "^19.0.2",
+    "baseline-browser-mapping": "^2.9.19",
     "eslint": "^9.17.0",
     "eslint-config-next": "^16.0.8",
     "postcss": "^8.4.49",
