@@ -1,10 +1,8 @@
 # Hyades
 
-<div align="center">
-
-![Hyades](public/assets/images/hyades-logo.svg)
-
 _AI-Powered Image Editing and Asset Optimization Tool_
+
+<div>
 
 [![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://hyades.vercel.app/)
 [![Next.js](https://img.shields.io/badge/Next.js-16-black)](https://nextjs.org/)
